@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="MeteoBloom/docs/screen1.png" alt="Partly Cloudy" width="260">
-  <img src="MeteoBloom/docs/screen2.png" alt="Thunderstorm" width="260">
-  <img src="MeteoBloom/docs/screen3.png" alt="Sunny" width="260">
+  <img src="MeteoBloom/docs/partly-cloudy.png" width="260" alt="Partly Cloudy">
+  <img src="MeteoBloom/docs/thunderstorm.png"  width="260" alt="Thunderstorm">
+  <img src="MeteoBloom/docs/sunny.png"        width="260" alt="Sunny">
 </p>
