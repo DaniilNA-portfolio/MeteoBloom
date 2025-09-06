@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Londrina Sketch", cursive; */
+
+  font-weight: 200;
+  color: #fff;
+  background: linear-gradient(135deg, #1a1a1a 0%, #343434 100%);
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes swayPendulum {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes smokeRise {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-40px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes fireWiggle {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-1px) rotate(-1.2deg) scale(1.01);
+  }
+  50% {
+    transform: translateY(-2px) rotate(0.8deg) scale(1.015);
+  }
+  75% {
+    transform: translateY(-1px) rotate(1deg) scale(1.01);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-off {
+    animation: none !important;
+  }
+}
+
+/* дождь */
+@keyframes raindrop-fall {
+  0% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--op, 0.6);
+  }
+  100% {
+    transform: translateY(220%) scaleY(1.1);
+    opacity: 0.2;
+  }
+}
+
+.weather-abs.rain .raindrop {
+  position: absolute;
+  top: 100%; /* старт сразу под нижним краем облака */
+  width: 2px;
+  height: 14px;
+  border-radius: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.2)
+  );
+  will-change: transform, opacity;
+  animation-name: raindrop-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+}
+
+@keyframes raindrop-fall {
+  0% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--op, 0.6);
+  }
+  100% {
+    transform: translateY(220%) scaleY(1.1);
+    opacity: 0.2;
+  }
+}
